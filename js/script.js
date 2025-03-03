@@ -29,17 +29,17 @@ console.log('countOfHearts = ' + countOfHearts);
 document.getElementById('count-of-hearts').innerText = "❤️".repeat(countOfHearts) + "♡".repeat(5 - countOfHearts);
 
 // Обробник натискання на кнопку "Отримати побажання"
-document.getElementById('btn_love_wishes').addEventListener('click', () => {
+document.getElementById('btn_healt_wishes').addEventListener('click', () => {
     console.log('Button clicked');
-    let index = Math.floor(Math.random() * arrayOfLoveWishes.length);
-    document.getElementById('love-wishes').innerText = arrayOfLoveWishes[index];
+    let index = Math.floor(Math.random() * arrayOfhealtWishes.length);
+    document.getElementById('healt-wishes').innerText = arrayOfhealtWishes[index];
 
     countOfHearts--;
     console.log('countOfHearts = ' + countOfHearts);
     document.getElementById('count-of-hearts').innerText = "❤️".repeat(countOfHearts) + "".repeat(5 - countOfHearts);
 
     if (countOfHearts === 0) {
-        document.getElementById('btn_love_wishes').style.display = 'none';
+        document.getElementById('btn_healt_wishes').style.display = 'none';
     }
 });
 
@@ -47,7 +47,7 @@ document.getElementById('btn_love_wishes').addEventListener('click', () => {
 document.getElementById('btn-buy-hearts').addEventListener('click', () => {
     countOfHearts = 5;
     document.getElementById('count-of-hearts').innerText = "❤️".repeat(countOfHearts) + "🤍".repeat(5 - countOfHearts);
-    document.getElementById('btn_love_wishes').style.display = 'inline-block';
-    document.getElementById('love-wishes').innerText = "";
+    document.getElementById('btn_healt_wishes').style.display = 'inline-block';
+    document.getElementById('healt-wishes').innerText = "";
     console.log('btn-buy-hearts clicked');
 });
