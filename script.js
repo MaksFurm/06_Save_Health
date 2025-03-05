@@ -24,10 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const buyButton = document.getElementById('btn-buy-pills');
 
     function updatePills() {
-        pillsElement.innerHTML = countOfPills > 0 
-            ? "💊".repeat(countOfPills) + "⬜".repeat(5 - countOfPills) 
-            : "";
-        tipButton.disabled = countOfPills === 0;
+        if (countOfPills > 0) {
+            pillsElement.innerHTML = "💊".repeat(countOfPills) + "⬜".repeat(5 - countOfPills);
+            tipButton.disabled = false;
+        } else {
+            pillsElement.innerHTML = "Поповніть Пігулки";
+            tipButton.disabled = true;
+        }
     }
 
     tipButton.addEventListener('click', () => {
@@ -36,8 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tipElement.textContent = healthTips[index];
             countOfPills--;
             updatePills();
-        } else {
-            tipElement.textContent = "Поповніть Пігулки";
         }
     });
 
