@@ -1,35 +1,39 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: cursive; /* Оновлений шрифт */
   font-size: 14px;
   line-height: 20px;
   color: #000000;
-  background: url("https://poradnica.com.ua/wp-content/uploads/2024/03/health-4578888-e1544520598251.jpg") no-repeat center center;
+  background: url("https://zaborona.com/wp-content/uploads/2023/09/gettyimages-1289228731.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
-  justify-content: center; /* Вирівнюємо по центру */
+  justify-content: center;
   align-items: center;
-  height: 100vh; /* Вся висота екрану */
+  height: 100vh;
 }
 
 /* ПІВПРОЗОРИЙ БЛОК */
 .transparent-box {
-  width: 500px; /* Ширина блоку */
-  background: rgba(144, 232, 238, 0.5); /* Світло-салатовий з прозорістю */
+  width: 500px;
+  background: rgba(144, 208, 238, 0.5);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тінь для контрасту */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Контейнер для контенту */
 .container {
   text-align: center;
+  font-family: cursive; /* Шрифт для всього контенту */
+}
+
+h1, h2, p, button {
+  font-family: cursive; /* Шрифт для заголовків, тексту, кнопок */
 }
 
 h1 {
-  font-family: "Georgia", serif;
   font-size: 28px;
   line-height: 36px;
   margin-bottom: 10px;
