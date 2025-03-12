@@ -15,12 +15,42 @@
                 <img src="img/1.jpg" alt="Здоровий спосіб життя" class="health-image">
             </header>
 
-            <section class="features">
+            <section class="health-learning">
                 <h2>Чому це важливо?</h2>
-                <p class="feature feature-health">✅ Збалансоване харчування – основа міцного здоров'я.</p>
-                <p class="feature feature-exercise">🏃‍♂️ Фізична активність зміцнює організм і покращує настрій.</p>
-                <p class="feature feature-rest">😴 Повноцінний сон допомагає відновити сили.</p>
+                <ul class="health-list">
+                    <li class="gray">✅ Збалансоване харчування – основа міцного здоров'я</li>
+                    <li class="light-blue">🏃‍♂️ Фізична активність зміцнює організм і покращує настрій</li>
+                    <li class="blue">😴 Повноцінний сон допомагає відновити сили</li>
+                    <li class="dark-blue">💪 Спорт це - дисципліна і свобода</li>
+                    <li class="dark-blue">😎 Займатись спортом це круто</li>
+                </ul>
             </section>
+
+            <section class="health-learning">
+                <h2>Що ви дізнаєтеся про здоров'я?</h2>
+                <ul class="health-list">
+                    <li class="gray">Як правильно збалансувати харчування</li>
+                    <li class="light-blue">Як покращити якість сну</li>
+                    <li class="blue">Як підтримувати водний баланс</li>
+                    <li class="dark-blue">Як впровадити фізичні вправи у щоденний розклад</li>
+                    <li class="dark-blue">Як ефективно керувати стресом</li>
+                </ul>
+            </section>
+
+            <section class="gallery">
+                <h2>Галерея здоров'я</h2>
+                <div class="gallery-container">
+                    <img src="" class="gallery-item" onclick="openLightbox(this.src)" alt="Здорове харчування">
+                    <img src="" class="gallery-item" onclick="openLightbox(this.src)" alt="Фізична активність">
+                    <img src="" class="gallery-item" onclick="openLightbox(this.src)" alt="Медитація">
+                    <img src="" class="gallery-item" onclick="openLightbox(this.src)" alt="Свіже повітря">
+                </div>
+            </section>
+
+            <!-- Модальне вікно для збільшених зображень -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" class="lightbox-content">
+            </div>
 
             <section class="health-tips">
                 <h2>Отримати корисну пораду</h2>
