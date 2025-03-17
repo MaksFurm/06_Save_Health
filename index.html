@@ -26,31 +26,14 @@
                 </ul>
             </section>
 
-            <section class="health-learning">
-                <h2>Що ви дізнаєтеся про здоров'я?</h2>
-                <ul class="health-list">
-                    <li class="gray">Як правильно збалансувати харчування</li>
-                    <li class="light-blue">Як покращити якість сну</li>
-                    <li class="blue">Як підтримувати водний баланс</li>
-                    <li class="dark-blue">Як впровадити фізичні вправи у щоденний розклад</li>
-                    <li class="dark-blue">Як ефективно керувати стресом</li>
-                </ul>
-            </section>
-
             <section class="gallery">
                 <h2>Галерея здоров'я</h2>
                 <div class="gallery-container">
-                    <img src="" class="gallery-item" onclick="openLightbox(this.src)">
-                    <img src="" class="gallery-item" onclick="openLightbox(this.src)">
-                    <img src="" class="gallery-item" onclick="openLightbox(this.src)">
-                    <img src="" class="gallery-item" onclick="openLightbox(this.src)">
+                    <button class="gallery-btn left" onclick="prevImage()">⬅</button>
+                    <img id="gallery-image" class="gallery-item">
+                    <button class="gallery-btn right" onclick="nextImage()">➡</button>
                 </div>
             </section>
-            
-            <!-- Модальне вікно для збільшених зображень -->
-            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                <img id="lightbox-img" class="lightbox-content">
-            </div>
 
             <section class="health-tips">
                 <h2>Отримати корисну пораду</h2>

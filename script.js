@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
         "Харчуйтесь збалансовано! 🍏",
         "Робіть зарядку щоранку! 🏃",
         "Висипайтесь мінімум 7-8 годин! 😴",
-        "Менше стресу  більше позитиву! 😊",
-        "Робіть перерви під час роботи! ⏸️",
-        "Більше рухайтеся  менше сидіть! 🚶",
-        "Захищайте очі від екранів! 👁",
-        "Вживайте менше цукру! 🍫❌",
-        "Слідкуйте за поставою! 🪡",
-        "Дихайте глибше  це допомагає розслабитися! 🌬️",
-        "Виходьте на свіже повітря щодня! 🌳",
-        "Контролюйте баланс роботи та відпочинку! ⚖️",
-        "Медитація зменшує стрес! 🤸",
-        "Усміхайтеся частіше  це покращує настрій! 😃"
+        "Менше стресу – більше позитиву! 😊",
+        "Частіше проводьте час на свіжому повітрі! 🌳",
+        "Пийте чай з трав для заспокоєння! 🍵",
+        "Регулярно займайтесь фізичною активністю! 🏋️‍♀️",
+        "Не забувайте про здорове харчування! 🥗",
+        "Використовуйте час для відпочинку та розслаблення! 🌙",
+        "Медитуйте для збереження внутрішнього спокою! 🧘‍♂️",
+        "Читати книги – це не тільки корисно, а й захопливо! 📚",
+        "Робіть перерви під час роботи для відновлення енергії! ⚡",
+        "Більше смійтеся – це найкращі ліки від стресу! 😂",
+        "Проводьте час з тими, кого любите, це важливо! ❤️"
     ];
 
     let countOfPills = 5;
@@ -23,30 +23,55 @@ document.addEventListener("DOMContentLoaded", function () {
     const tipButton = document.getElementById('btn_health_tips');
     const buyButton = document.getElementById('btn-buy-pills');
 
+    // Оновлюємо кількість пігулок
     function updatePills() {
-        if (countOfPills > 0) {
-            pillsElement.innerHTML = "💊".repeat(countOfPills) + "⬜".repeat(5 - countOfPills);
-            tipButton.disabled = false;
-        } else {
-            pillsElement.innerHTML = "Поповніть Пігулки";
-            tipButton.disabled = true;
-        }
+        // Замість пігулок, якщо їх більше 0, ставимо "⬜"
+        pillsElement.innerHTML = "💊".repeat(countOfPills) + "⬜".repeat(5 - countOfPills);
+        tipButton.disabled = countOfPills === 0;
     }
 
+    // Отримання поради
     tipButton.addEventListener('click', () => {
         if (countOfPills > 0) {
             let index = Math.floor(Math.random() * healthTips.length);
             tipElement.textContent = healthTips[index];
-            countOfPills--;
-            updatePills();
+            countOfPills--;  // Віднімаємо одну пігулку
+            updatePills();  // Оновлюємо кількість пігулок
         }
     });
 
+    // Купити пігулки
     buyButton.addEventListener('click', () => {
-        countOfPills = 5;
-        updatePills();
+        countOfPills = 5;  // Встановлюємо максимальну кількість
+        updatePills();  // Оновлюємо кількість пігулок
         tipElement.textContent = "Пігулки поповнено! Можете отримувати поради.";
     });
 
-    updatePills();
+    updatePills();  // Ініціалізація початкової кількості пігулок
+
+    // Галерея
+    const galleryImages = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
+    let currentImageIndex = 0;
+    const galleryImage = document.getElementById('gallery-image');
+
+    function updateGalleryImage() {
+        galleryImage.style.opacity = 0;
+        setTimeout(() => {
+            galleryImage.src = galleryImages[currentImageIndex];
+            galleryImage.style.opacity = 1;
+        }, 500);
+    }
+
+    window.nextImage = function () {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        updateGalleryImage();
+    };
+
+    window.prevImage = function () {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateGalleryImage();
+    };
+
+    updateGalleryImage();
 });
+

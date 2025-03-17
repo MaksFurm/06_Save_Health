@@ -14,7 +14,6 @@ body {
   height: 100vh;
 }
 
-
 .transparent-box {
   width: 1000px;
   background: rgba(144, 208, 238, 0.5);
@@ -23,14 +22,13 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-
 .container {
   text-align: center;
-  font-family: cursive; 
+  font-family: cursive;
 }
 
 h1, h2, p, button {
-  font-family: cursive; 
+  font-family: cursive;
 }
 
 h1 {
@@ -39,21 +37,12 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* Тінь для головного зображення */
 .health-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.features {
-  margin-bottom: 20px;
-}
-
-.feature {
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -65,27 +54,63 @@ h1 {
   font-size: 16px;
 }
 
-.site-footer {
-  font-weight: bold;
-  margin-top: 15px;
+/* Підсвічування кнопки при наведенні */
+.btn:hover {
+    box-shadow: 0px 0px 15px rgba(87, 255, 96, 0.8);
 }
 
-.health-learning {
-  margin: 20px 0;
+/* Зміна тіні при натисканні */
+.btn:active {
+    box-shadow: 0px 0px 20px rgba(255, 87, 96, 1);
 }
 
+/* Галерея */
+.gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 400px; /* Фіксована ширина */
+    height: 300px; /* Фіксована висота */
+    border-radius: 8px;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover; /* Зберігає пропорції, обрізаючи зайве */
+}
+
+/* Кнопки галереї */
+.gallery-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.gallery-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Список з кольоровими лініями */
 .health-list {
-  list-style: none;
-  padding: 0;
+    list-style: none; /* Прибираємо стандартні маркери */
+    padding: 0;
 }
 
 .health-list li {
-  padding: 8px;
-  border-left: 6px solid;
-  margin-bottom: 5px;
-  font-size: 16px;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border-left: 6px solid; /* Лінія зліва */
 }
 
+/* Кольори для ліній */
 .gray { border-color: #cccccc; color: #666666; }
 .light-blue { border-color: #99ccff; color: #336699; }
 .blue { border-color: #6699cc; color: #003366; }
