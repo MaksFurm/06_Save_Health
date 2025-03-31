@@ -73,8 +73,8 @@ h1 {
 }
 
 .gallery-item {
-    width: 400px; /* Фіксована ширина */
-    height: 300px; /* Фіксована висота */
+    width: 500px; /* Фіксована ширина */
+    height: 400px; /* Фіксована висота */
     border-radius: 8px;
     transition: opacity 0.5s ease-in-out;
     object-fit: cover; /* Зберігає пропорції, обрізаючи зайве */

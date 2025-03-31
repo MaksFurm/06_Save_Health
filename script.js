@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Купити пігулки
     buyButton.addEventListener('click', () => {
-        countOfPills = 5;  // Встановлюємо максимальну кількість
+        countOfPills = 5;  // макс кількість
         updatePills();  // Оновлюємо кількість пігулок
         tipElement.textContent = "Пігулки поповнено! Можете отримувати поради.";
     });
@@ -61,6 +61,63 @@ document.addEventListener("DOMContentLoaded", function () {
             galleryImage.style.opacity = 1;
         }, 500);
     }
+
+    const arrayOfVitaminObjects = [
+        {
+            "id":1,
+            "title":"Вітамін C",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+
+        {
+            "id":2,
+            "title":"Вітамін B3",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+      
+        {
+            "id":3,
+            "title":"Вітамін D3",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+
+        {
+            "id":4,
+            "title":"Вітамін B12",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+
+        {
+            "id":5,
+            "title":"Вітамін A",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+
+        {
+            "id":6,
+            "title":"Вітамін BCAA",
+            "photo":"",
+            "description":"",
+            "rating":"",
+            "useful":"",
+        },
+
+    ]
 
     window.nextImage = function () {
         currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
