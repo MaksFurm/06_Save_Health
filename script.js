@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             "id":2,
-            "title":"Вітамін B3",
+            "title":"Омега-3",
             "photo":"",
             "description":"",
             "rating":"",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
         {
             "id":3,
-            "title":"Вітамін D3",
+            "title":"Вітамін-D3",
             "photo":"",
             "description":"",
             "rating":"",
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             "id":4,
-            "title":"Вітамін B12",
+            "title":"Вітамін-B12",
             "photo":"",
             "description":"",
             "rating":"",
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             "id":5,
-            "title":"Вітамін A",
+            "title":"Вітамін-A",
             "photo":"",
             "description":"",
             "rating":"",
@@ -111,13 +111,25 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             "id":6,
             "title":"Вітамін BCAA",
-            "photo":"",
+            "photo":"img/sport.png",
             "description":"",
             "rating":"",
             "useful":"",
         },
 
     ]
+
+    //console.log(arrayOfVitaminObjects)
+
+    arrayOfVitaminObjects.forEach((item) => {
+        //console.log(item)
+
+        let divVitamin = document.createElement('div')
+        divVitamin.classList.add('vitamin')
+        divVitamin.innerText - item.title
+
+        document.getElementById('p-vitamins').appendChild(divVitamin)
+    })
 
     window.nextImage = function () {
         currentImageIndex = (currentImageIndex + 1) % galleryImages.length;

@@ -115,3 +115,20 @@ h1 {
 .light-blue { border-color: #99ccff; color: #336699; }
 .blue { border-color: #6699cc; color: #003366; }
 .dark-blue { border-color: #336699; color: #001a33; }
+
+/* Вітаміни */
+#p-vitamins{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vitamin{
+  border: #999999 1px solid;
+  box-shadow: 10px 10px 20px #c4c4c4
+  padding 10px;
+  width: 200px;
+  height: 300px;
+}
